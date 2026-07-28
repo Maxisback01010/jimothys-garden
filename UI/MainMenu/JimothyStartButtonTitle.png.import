@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dy1dk0ibkr3pd"
-path="res://.godot/imported/download.png-f8c793d65639fa83900ac69982b8473b.ctex"
+uid="uid://ccabto0yk4vjd"
+path="res://.godot/imported/JimothyStartButtonTitle.png-cca4bc559272b925499f75f17fd33bb5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/download.png"
-dest_files=["res://.godot/imported/download.png-f8c793d65639fa83900ac69982b8473b.ctex"]
+source_file="res://UI/MainMenu/JimothyStartButtonTitle.png"
+dest_files=["res://.godot/imported/JimothyStartButtonTitle.png-cca4bc559272b925499f75f17fd33bb5.ctex"]
 
 [params]
 
