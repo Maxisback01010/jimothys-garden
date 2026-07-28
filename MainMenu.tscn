@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://cjwcx4lgftawb"]
 
 [ext_resource type="Texture2D" uid="uid://c5kgdklwmahu8" path="res://UI/MainMenu/JimothyBackground.png" id="1_i26rj"]
+[ext_resource type="Script" uid="uid://4attyljbyb37" path="res://main_menu.gd" id="1_iwfq2"]
 [ext_resource type="Texture2D" uid="uid://caoxtg83diwob" path="res://UI/MainMenu/JimothySignTitle.png" id="2_eiy7p"]
 [ext_resource type="Texture2D" uid="uid://ccabto0yk4vjd" path="res://UI/MainMenu/JimothyStartButtonTitle.png" id="3_h7a2f"]
 [ext_resource type="Texture2D" uid="uid://damtokuhmvvs" path="res://UI/MainMenu/JimothyRunningTitle (2) (1).png" id="4_qoqlk"]
@@ -58,6 +59,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_iwfq2")
 
 [node name="Background" type="TextureRect" parent="." unique_id=1957926687]
 layout_mode = 1
@@ -106,3 +108,6 @@ texture = ExtResource("4_qoqlk")
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1548837716]
 libraries/ = SubResource("AnimationLibrary_7r1g0")
 autoplay = &"idle"
+
+[connection signal="pressed" from="StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="StartButton" to="Background" method="_on_start_button_pressed"]
