@@ -13,6 +13,44 @@
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cdot0"]
 
+[sub_resource type="Animation" id="Animation_qoqlk"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Jimothy:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(571, 473)]
+}
+
+[sub_resource type="Animation" id="Animation_iwfq2"]
+resource_name = "idle"
+length = 10.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Jimothy:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(1, 2, 3, 4, 5, 6, 7, 8, 9, 10),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(579, 481), Vector2(571, 473), Vector2(579, 481), Vector2(571, 473), Vector2(579, 481), Vector2(571, 473), Vector2(579, 481), Vector2(571, 473), Vector2(579, 481), Vector2(571, 473)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_7r1g0"]
+_data = {
+&"RESET": SubResource("Animation_qoqlk"),
+&"idle": SubResource("Animation_iwfq2")
+}
+
 [node name="Control" type="Control" unique_id=395825945]
 layout_mode = 3
 anchors_preset = 15
@@ -61,6 +99,10 @@ theme_override_styles/hover = SubResource("StyleBoxEmpty_up6bo")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_cdot0")
 
 [node name="Jimothy" type="Sprite2D" parent="." unique_id=1558602117]
-position = Vector2(554, 486.99997)
+position = Vector2(571, 473)
 scale = Vector2(0.21138513, 0.217041)
 texture = ExtResource("4_qoqlk")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1548837716]
+libraries/ = SubResource("AnimationLibrary_7r1g0")
+autoplay = &"idle"
